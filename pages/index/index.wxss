@@ -1,0 +1,61 @@
+/**index.wxss**/
+
+page {
+  padding-top: 50rpx;
+  background-color: #F9F7F7;
+  padding-bottom: 60rpx;
+  font-size:large;
+  color:#112D4E;
+}
+
+.title {
+  font-family: PingFang SC;
+  font-weight: 500;
+  font-size: 46rpx;
+  margin-bottom: 50rpx;
+  text-align:center;
+}
+
+.environment{
+  font-size: 22rpx;
+  color: #5974a7;
+  padding-top:25%;
+  margin-top:100px;
+  margin: auto;
+  margin-left:45%;
+}
+
+.box{
+    margin:6% 10% 6% 10%;
+    background-color: #DBE2EF;
+    border-radius:12px;
+    border-left:2.5px solid #112D4E;
+}
+
+.result{
+    margin-left: 6%;
+    margin-top: 25%;
+}
+
+.inputresult{
+    margin-left: 6%;
+    margin-top: 25%;
+}
+
+
+.inputunit{
+    position: absolute; 
+    right: 15%;
+    color: #808080;
+    display: block;
+    padding: 12px 10px;
+    box-sizing: border-box;
+}
+
+
+input{
+    padding:3.5%;
+    border-radius:13px;
+    border-left:2.5px solid #112D4E;
+    background-color: #DBE2EF; 
+}

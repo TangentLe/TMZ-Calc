@@ -1,0 +1,32 @@
+<!--index.wxml-->
+
+<view class='title' size='default'>用药计算</view>
+<view>
+    <form bindsubmit='Mosteller'>
+        <input bindinput="inputcheckHeight" bindblur="BlurCheckHeight" maxlength='6' focus='{{true}}' type='digit' placeholder=" 身高" cursor-spacing='10' name="height" style="margin:0 10% 6% 10%;background-color:{{input1}}">
+            <span class="inputunit" style="top: 161rpx">{{heightunit}}</span>
+        </input>
+        <input bindinput="inputcheckWeight" bindblur="BlurCheckWeight" maxlength='5' type='digit' placeholder=' 体重' cursor-spacing='10' name="weight" style="margin:0 10% 0 10%;background-color:{{input2}}">
+            <span class="inputunit" style="top: 300rpx">kg</span>
+        </input>
+        <view class="box">
+            <view wx:if="{{htext || wtext}}" style="padding-top:3.5%"></view>
+            <view>
+                <text wx:if="{{htext}}" class="inputresult" style="color:{{ircolorh}}">{{inputValueh}}</text><text wx:if="{{htext && wtext}}" style="padding-inline-start: 2.25%"></text>
+                <text wx:if="{{wtext}}" class="inputresult" decode='true'>{{inputValuew}}</text>
+            </view>
+            <view style="padding-top:3%"></view>
+                <view wx:if="{{resulttext}}">
+                    <text class="result" style="margin-top:3%" decode='true'>体表面积为：{{thebsa}}</text>
+                    <view style="padding-top:3%"></view>
+                    <text class="result">每日口服剂量为：{{thedrug}}</text>
+                </view>
+                <view wx:if="{{!resulttext}}">
+                    <text style="position: relative; left: 208rpx; top:0rpx">请重新确认❗</text>
+                </view>
+            <view style="padding-top:3.5%"></view>
+        </view>
+        <button type='primary' formType="submit"><text style="font-size:larger;color:#F9F7F7">计算</text></button>
+    </form>
+</view>
+<view class="environment">2022.12</view>
